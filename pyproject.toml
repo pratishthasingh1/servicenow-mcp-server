@@ -1,0 +1,17 @@
+[project]
+name = "servicenow-mcp-server"
+version = "0.1.0"
+description = "MCP server for ServiceNow change request management"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]",
+    "httpx",
+    "python-dotenv",
+]
+
+[project.scripts]
+servicenow-mcp = "server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
